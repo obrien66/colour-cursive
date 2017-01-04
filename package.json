@@ -1,6 +1,6 @@
 {
   "name": "colour-cursive",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Chalk colours but so much faster",
   "main": "index.js",
   "scripts": {
