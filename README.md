@@ -48,4 +48,3 @@ console.log(chalk.gray("I am a gray string"));
 
 ```
 
-Give me a while to fix it up
