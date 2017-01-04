@@ -1,0 +1,14 @@
+{
+  "name": "colour-cursive",
+  "version": "0.1.0",
+  "description": "Chalk colours but so much faster",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nicholas O'Brien <nicholas.obrien@ucc.on.ca> (http://obrien.tech)",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^1.1.3"
+  }
+}
