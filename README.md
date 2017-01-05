@@ -1,6 +1,17 @@
 # colour-cursive
 [![npm version](https://badge.fury.io/js/colour-cursive.svg)](https://badge.fury.io/js/colour-cursive)
 
+Install locally
+```
+npm install colour-cursive
+```
+or globally
+```
+npm install colour-cursive -g
+```
+
+
+
 I like colours (specifically [chalk](https://www.npmjs.com/package/chalk)) but I hate all the typing I have to do for it to work. Also I really wanted to learn how to make packages and this seems like a fun way to do that.
 
 ```js
