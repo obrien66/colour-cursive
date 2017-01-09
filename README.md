@@ -1,5 +1,6 @@
 # colour-cursive
 [![npm version](https://badge.fury.io/js/colour-cursive.svg)](https://badge.fury.io/js/colour-cursive)
+[![NPM](https://nodei.co/npm/colour-cursive.png?downloads=true)](https://nodei.co/npm/colour-cursive/)
 
 Install locally
 ```
