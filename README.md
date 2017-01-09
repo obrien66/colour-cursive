@@ -15,7 +15,7 @@ npm install colour-cursive -g
 I like colours (specifically [chalk](https://www.npmjs.com/package/chalk)) but I hate all the typing I have to do for it to work. Also I really wanted to learn how to make packages and this seems like a fun way to do that.
 
 ```js
-var cc = require("./index");
+var cc = require("colour-cursive");
 
 // red
 cc.red("I am a red string");
