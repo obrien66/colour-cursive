@@ -1,36 +1,39 @@
 var cc = require("./index");
 
 // red
-cc.red("I am a red string");
+cc.red("Successful red string");
 // yellow
-cc.yellow("I am a yellow string");
+cc.yellow("Successful yellow string");
 // green
-cc.green("I am a green string");
+cc.green("Successful green string");
 // blue
-cc.blue("I am a blue string");
+cc.blue("Successful blue string");
 // cyan
-cc.cyan("I am a cyan string");
+cc.cyan("Successful cyan string");
 // magenta
-cc.magenta("I am a magenta string");
+cc.magenta("Successful magenta string");
 // gray
-cc.gray("I am a gray string");
+cc.gray("Successful gray string");
 
 // Backgrounds \\
 
 // background black
-cc.bg("I have a black background", "black");
+cc.bg("Successful black background", "black");
 // background red
-cc.bg("I have a red background", "red");
+cc.bg("Successful red background", "red");
 // background green
-cc.bg("I have a green background", "green");
+cc.bg("Successful green background", "green");
 // background yellow
-cc.bg("I have a yellow background", "yellow");
+cc.bg("Successful yellow background", "yellow");
 // background blue
-cc.bg("I have a blue background", "blue");
+cc.bg("Successful blue background", "blue");
 // background magenta
-cc.bg("I have a magenta background", "magenta");
+cc.bg("Successful magenta background", "magenta");
 // background cyan
-cc.bg("I have a cyan background", "cyan");
+cc.bg("Successful cyan background", "cyan");
 // background white
-cc.bg("I have a white background", "white");
+cc.bg("Successful white background", "white");
 
+//error
+
+cc.bg("Successful error handling", "not_a_colour")

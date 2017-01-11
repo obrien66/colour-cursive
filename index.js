@@ -1,60 +1,67 @@
 var chalk = require('chalk');
-// bgBlack
-// bgRed
-// bgGreen
-// bgYellow
-// bgBlue
-// bgMagenta
-// bgCyan
-// bgWhite
+
 module.exports = {
-	red: function(string) {
+	red: (string) => {
 		return console.log(chalk.red(string))
 	},
-	yellow: function(string) {
+	yellow: (string) => {
 		return console.log(chalk.yellow(string))
 	},
-	green: function(string) {
+	green: (string) => {
 		return console.log(chalk.green(string))
 	},
-	blue: function(string) {
+	blue: (string) => {
 		return console.log(chalk.blue(string))
 	},
-	cyan: function(string) {
+	cyan: (string) => {
 		return console.log(chalk.cyan(string))
 	},
-	magenta: function(string) {
+	magenta: (string) => {
 		return console.log(chalk.magenta(string))
 	},
-	gray: function(string) {
+	gray: (string) => {
 		return console.log(chalk.gray(string))
 	},
-	bg: function(string, color){
-		switch(color){
-			case "black":
-				return console.log(chalk.bgBlack(string));
-				break
-			case "red":
-				return console.log(chalk.bgRed(string));
-				break
-			case "green":
-				return console.log(chalk.bgGreen(string));
-				break
-			case "yellow":
-				return console.log(chalk.bgYellow(string));
-				break
-			case "blue":
-				return console.log(chalk.bgBlue(string));
-				break
-			case "magenta":
-				return console.log(chalk.bgMagenta(string));
-				break
-			case "cyan":
-				return console.log(chalk.bgCyan(string));
-				break
-			case "white":
-				return console.log(chalk.bgWhite(string));
-				break
+	inverse: (string) => {
+		return console.log(chalk.inverse(string));
+	},
+	bg: (string, color) => {
+		
+		if (color == "black"){
+			return console.log(chalk.bgBlack(string));
 		}
+
+		else if (color == "red"){
+			return console.log(chalk.bgRed(string));
+		}
+
+		else if (color == "green"){
+			return console.log(chalk.bgGreen(string));
+		}
+
+		else if (color == "yellow"){
+			return console.log(chalk.bgYellow(string));
+		}
+
+		else if (color == "blue"){
+			return console.log(chalk.bgBlue(string));
+		}
+
+		else if (color == "magenta"){
+			return console.log(chalk.bgMagenta(string));
+		}
+
+		else if (color == "cyan"){
+			return console.log(chalk.bgCyan(string));
+		}
+
+		else if (color == "white"){
+			return console.log(chalk.bgWhite(string));
+		}
+
+		else {
+			return console.log(chalk.red("WARNING! ") + chalk.bold(color) + " is not an available colour.");
+		}
+
 	}
 }
