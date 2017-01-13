@@ -34,6 +34,22 @@ cc.bg("Successful cyan background", "cyan");
 // background white
 cc.bg("Successful white background", "white");
 
+// xTerm \\
+
+for (var i = 0; i < 256; i++) {
+	string = "Successful xTerm colour " + i;
+	cc.xText(string, i);
+}
+for (var i = 0; i < 256; i++) {
+	string = "Successful xTerm colour " + i;
+	cc.xBg(string, i);
+}
+
 //error
 
+cc.green("\nerror handling\n");
+
 cc.bg("Successful error handling", "not_a_colour")
+cc.xText("Invalid xTerm number", 999);
+cc.xText("Invalid xTerm number type", "string")
+

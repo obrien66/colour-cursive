@@ -1,4 +1,5 @@
-var chalk = require('chalk');
+var chalk  = require('chalk');
+var clc    = require('cli-color');
 
 module.exports = {
 	red: (string) => {
@@ -63,5 +64,29 @@ module.exports = {
 			return console.log(chalk.red("WARNING! ") + chalk.bold(color) + " is not an available colour.");
 		}
 
+	},
+	xText: (string, color) => {
+		if (color > 255 || color < 0){
+			return console.log(chalk.red("WARNING! ") + chalk.bold(color) + " is not an available colour.");
+		}
+		else if (typeof color != "number") {
+			return console.log(chalk.red("WARNING! ") + "the " + chalk.bold("colour") + " argument must be an integer between 0 and 255");
+		}
+		else {
+			var msg = clc.xterm(color);
+			console.log(msg(string));
+		}
+	},
+	xBg: (string, color) => {
+		if (color > 255 || color < 0){
+			return console.log(chalk.red("WARNING! ") + chalk.bold(color) + " is not an available colour.");
+		}
+		else if (typeof color != "number") {
+			return console.log(chalk.red("WARNING! ") + "the " + chalk.bold("colour") + " argument must be an integer between 0 and 255");
+		}
+		else {
+			var msg = clc.bgXterm(color);
+			console.log(msg(string));
+		}
 	}
 }
