@@ -15,6 +15,8 @@ I like colours (specifically [chalk](https://www.npmjs.com/package/chalk)) but I
 
 I have recently added xTerm colour support. I will write actual documentation soon. For now here's a quick guide on how to use this. For a complete list of colours enter the command below.
 
+This packages is set up so there is no need for `console.log();`. The module will print it to the screen for you.
+
 ```
 $ cd node_modules/colour-cursive; npm test;
 ```
