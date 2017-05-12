@@ -1,92 +1,78 @@
-var chalk  = require('chalk');
-var clc    = require('cli-color');
+const clc = require('cli-color');
 
 module.exports = {
 	red: (string) => {
-		return console.log(chalk.red(string))
+		return console.log(clc.red(string))
 	},
 	yellow: (string) => {
-		return console.log(chalk.yellow(string))
+		return console.log(clc.yellow(string))
 	},
 	green: (string) => {
-		return console.log(chalk.green(string))
+		return console.log(clc.green(string))
 	},
 	blue: (string) => {
-		return console.log(chalk.blue(string))
+		return console.log(clc.blue(string))
 	},
 	cyan: (string) => {
-		return console.log(chalk.cyan(string))
+		return console.log(clc.cyan(string))
 	},
 	magenta: (string) => {
-		return console.log(chalk.magenta(string))
+		return console.log(clc.magenta(string))
 	},
 	gray: (string) => {
-		return console.log(chalk.gray(string))
-	},
-	inverse: (string) => {
-		return console.log(chalk.inverse(string));
+		return console.log(clc.blackBright(string))
 	},
 	bg: (string, color) => {
-		
-		if (color == "black"){
-			return console.log(chalk.bgBlack(string));
-		}
 
-		else if (color == "red"){
-			return console.log(chalk.bgRed(string));
-		}
+		switch(color){
 
-		else if (color == "green"){
-			return console.log(chalk.bgGreen(string));
-		}
+		case "black":
+			return console.log(clc.bgBlack(string));
+		case "red":
+			return console.log(clc.bgRed(string));
+		case "green":
+			return console.log(clc.bgGreen(string));
+		case "yellow":
+			return console.log(clc.bgYellow(string));
+		case "blue":
+			return console.log(clc.bgBlue(string));
+		case "magenta":
+			return console.log(clc.bgMagenta(string));
+		case "cyan":
+			return console.log(clc.bgCyan(string));
+		case "white":
+			return console.log(clc.bgWhite(string));
 
-		else if (color == "yellow"){
-			return console.log(chalk.bgYellow(string));
-		}
-
-		else if (color == "blue"){
-			return console.log(chalk.bgBlue(string));
-		}
-
-		else if (color == "magenta"){
-			return console.log(chalk.bgMagenta(string));
-		}
-
-		else if (color == "cyan"){
-			return console.log(chalk.bgCyan(string));
-		}
-
-		else if (color == "white"){
-			return console.log(chalk.bgWhite(string));
-		}
-
-		else {
-			return console.log(chalk.red("WARNING! ") + chalk.bold(color) + " is not an available colour.");
+			throw new Error(`${color} is not an available colour.`)
 		}
 
 	},
 	xText: (string, color) => {
 		if (color > 255 || color < 0){
-			return console.log(chalk.red("WARNING! ") + chalk.bold(color) + " is not an available colour.");
+			throw new Error(`${color} is not an available colour.`)
 		}
 		else if (typeof color != "number") {
-			return console.log(chalk.red("WARNING! ") + "the " + chalk.bold("colour") + " argument must be an integer between 0 and 255");
+			throw new Error("'color' argument must be an integer between 0 and 255")
 		}
 		else {
-			var msg = clc.xterm(color);
+			let msg = clc.xterm(color);
 			console.log(msg(string));
 		}
 	},
 	xBg: (string, color) => {
 		if (color > 255 || color < 0){
-			return console.log(chalk.red("WARNING! ") + chalk.bold(color) + " is not an available colour.");
+			throw new Error(` ${color} is either too large or too small.`)
 		}
 		else if (typeof color != "number") {
-			return console.log(chalk.red("WARNING! ") + "the " + chalk.bold("colour") + " argument must be an integer between 0 and 255");
+			throw new Error(`the color argument must be an integer between 0 and 255. Not ${typeof color}.`)
 		}
 		else {
-			var msg = clc.bgXterm(color);
+			let msg = clc.bgXterm(color);
 			console.log(msg(string));
 		}
+	},
+	underline: (string) => {
+		let message = clc.underline(string)
+		console.log(message);
 	}
 }

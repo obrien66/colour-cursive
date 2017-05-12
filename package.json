@@ -1,7 +1,7 @@
 {
   "name": "colour-cursive",
-  "version": "2.0.1",
-  "description": "Chalk colours but so much faster",
+  "version": "2.1.1",
+  "description": "Speedy CLI colours",
   "main": "index.js",
   "scripts": {
     "test": "node test.js"
@@ -9,7 +9,6 @@
   "author": "Nicholas O'Brien <nicholas.obrien@ucc.on.ca> (http://obrien.tech)",
   "license": "MIT",
   "dependencies": {
-    "chalk": "^1.1.3",
     "cli-color": "^1.1.0"
   },
   "devDependencies": {},
