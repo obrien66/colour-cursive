@@ -1,0 +1,54 @@
+{
+	"reset": "\033[0;30m",
+	"tag": "\033[",
+	"regular": {
+		"regular": "0;",
+		"bold": "1;",
+		"underline": "4;",
+		"black": "30m",
+		"red": "31m",
+		"green": "32m",
+		"yellow": "33m",
+		"blue": "34m",
+		"purple": "35m",
+		"cyan": "36m",
+		"white": "37m"
+	},
+
+	"background":{
+		"intense":{
+			"tag": "0;",
+			"black": "100m",
+			"red": "101m",
+			"green": "102m",
+			"yellow": "103m",
+			"blue": "104m",
+			"purple": "105m",
+			"cyan": "106m",
+			"white": "107m"
+		},
+		"regular": {
+			"tag": "",
+			"black": "40m",
+			"red": "41m",
+			"green": "42m",
+			"yellow": "43m",
+			"blue": "44m",
+			"purple": "45m",
+			"cyan": "46m",
+			"white": "47m"
+		}
+	},
+	"intense": {
+		"tag": "0;",
+		"boldTag": "1;",
+		"black": "90m",
+		"red": "91m",
+		"green": "92m",
+		"yellow": "93m",
+		"blue": "94m",
+		"purple": "95m",
+		"cyan": "96m",
+		"white": "97m"
+	}
+}
