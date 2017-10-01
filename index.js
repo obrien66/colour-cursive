@@ -96,7 +96,7 @@ module.exports = {
 		}
 
 		colourVal = getColour(colour, obj)
-		return tag + modifier + colourVal + string + reset
+		return tag + modifier + colourVal + string
 	},
 	background: (string, colour, intense) => {
 		var obj = (intense == "intense" ? background.intense : background.regular)
